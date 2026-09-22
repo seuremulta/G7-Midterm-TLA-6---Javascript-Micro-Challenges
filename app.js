@@ -15,9 +15,12 @@ function handleAddCategory() {
     alert("Please complete both input fields.");
     return;
   }
-  // Auto-Formatter: Uppercase the Category Name
-  const formattedName = catName.toUpperCase();
-  // Limits Description to 25 chars with ellipsis
+
+  let formattedName = catName.toUpperCase();
+  if (formattedName.length > 25) {
+    formattedName = formattedName.slice(0, 25) + "...";
+  }
+
   let formattedDesc = catDesc;
   if (formattedDesc.length > 25) {
     formattedDesc = formattedDesc.slice(0, 25) + "...";
