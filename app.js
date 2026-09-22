@@ -17,7 +17,7 @@ function handleAddCategory() {
   }
   // Auto-Formatter: Uppercase the Category Name
   const formattedName = catName.toUpperCase();
-  // Truncation Sanitizer: Limit Description to 25 chars with ellipsis
+  // Limits Description to 25 chars with ellipsis
   let formattedDesc = catDesc;
   if (formattedDesc.length > 25) {
     formattedDesc = formattedDesc.slice(0, 25) + "...";
